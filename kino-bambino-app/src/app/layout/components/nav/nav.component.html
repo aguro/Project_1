@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-container">
+    <span class="title">Kino Bambino</span>
+    <ul>
+      <li><a href="../movies">Movies</a></li>
+      <li>
+        <a href="../login" >
+          <p *ngIf="!isUserLoggedIn">Login</p>
+          <p *ngIf="isUserLoggedIn" (click)="logout()">Logout</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

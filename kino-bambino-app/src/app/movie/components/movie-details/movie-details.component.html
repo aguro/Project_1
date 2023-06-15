@@ -1,0 +1,23 @@
+<main>
+  <div class="container">
+    <div class="buttons-container">
+      <button class="navigate-button" type="button" onclick="window.history.go(-1); return false;">
+        <p class="dark-button">Back</p>
+      </button>
+    </div>
+    <div class="movie-contaier">
+      <div class="image-contaier">
+        <img class="movie-image" (error)="handleError($event)" src="{{movie?.large_cover_image}}" alt="Movie cover image">
+        <app-movie-ratings [movieId]="movieId"></app-movie-ratings>
+      </div>
+      <div class="info-container">
+        <h4>{{movie?.title_long}}</h4>
+        <p id="genre-list">
+          <span *ngFor="let genre of movie?.genres; let lastGenre = last">{{genre}}<ng-container
+              *ngIf="!lastGenre"> | </ng-container></span>
+        </p>
+        <p class="description">{{movie?.description_full}}</p>
+      </div>
+    </div>
+  </div>
+</main>

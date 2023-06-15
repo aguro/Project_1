@@ -1,0 +1,28 @@
+<div class="rating-container">
+  <p class="rating-title" *ngIf="totalRating">Total rating: {{totalRating}}</p>
+  <div *ngIf="isUserLoggedIn">
+    <p class="rating-title" *ngIf="userRating">Your rating: {{userRating}}</p>
+    <div *ngIf="!userRating">
+      <ng-container class="message-container" *ngIf="!message; else errorMessage">
+        <p class="info-container">Rate this movie!</p>
+      </ng-container>
+      <form (submit)="addRating()">
+        <input type="range" name="rating" [(ngModel)]="rating" min="1" max="5" step="1" required>
+        <div class="buttons-container">
+          <button class="submit-button" type="submit">
+            <p class="dark-button">Submit</p>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<ng-template #errorMessage>
+  <div *ngIf="messageType === 'error'">
+    <p class="error-message-container"> {{message}} </p>
+  </div>
+  <div *ngIf="messageType === 'info'">
+    <p class="info-message-container"> {{message}} </p>
+  </div>
+</ng-template>

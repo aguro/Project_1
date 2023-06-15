@@ -1,0 +1,24 @@
+<div>
+  <h3>Finder</h3>
+  <div class="finder-container">
+    <input type="text" placeholder="Search by name" [(ngModel)]="searchQuery">
+    <select name="genres" [(ngModel)]="genreQuery" id="middle-input">
+      <option value="" disabled selected>Search by genre</option>
+      <option *ngFor="let genre of genreOptions" value="{{genre}}">{{genre}}</option>
+    </select>
+    <select name="years" [(ngModel)]="yearQuery">
+      <option value="" disabled selected>Search by year</option>
+      <option *ngFor="let year of yearOptions" value="{{year}}">{{year}}</option>
+    </select>
+  </div>
+  <div class="buttons-container">
+    <button class="submit-button" type="submit" (click)="searchMovies()">
+      <p class="dark-button">Search</p>
+    </button>
+  </div>
+  <h4 *ngIf="results === 'noResults'">No results.</h4>
+  <h4 *ngIf="results === 'results'">Results: {{movies.length}}</h4>
+  <h4 *ngIf="results === 'toManyResults'" class="error-message-container ">Too many search results. Please specify.
+  </h4>
+  <app-movie-view [movies]="movies"></app-movie-view>
+</div>

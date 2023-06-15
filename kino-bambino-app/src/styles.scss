@@ -1,0 +1,105 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: #eff2fa;
+  margin: auto;
+  font-family: 'Andale Mono', Helvetica, sans-serif;
+  background: #010717;
+}
+
+main {
+  width: 100%;
+  margin-top: 10rem;
+  padding-bottom: 4rem;
+  background: #010717;
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: #eff2fa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+input,
+select {
+  border-radius: 5px;
+  border: 1px solid #dfd9c5;
+  width: 50%;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.buttons-container {
+  margin: 1rem 0;
+}
+
+.submit-button,
+.navigate-button {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #dfd9c5;
+  height: 40px;
+  width: 160px;
+  background-color: transparent;
+}
+
+.button {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.dark-button {
+  color: #eff2fa;
+  margin: auto;
+}
+
+.message-container {
+  height: 20px;
+  margin: 0.5rem 0;
+}
+
+.info-container {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.info-message-container {
+  padding: 1rem 0 1rem 0.5rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 9px 1px rgba(green, 0.5);
+}
+
+.error-message-container {
+  padding: 1rem 0 1rem 0.5rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 9px 1px rgba(red, 0.5);
+}
+
+h3 {
+  text-shadow: 1px 1px 2px pink, 0 0 1em rgb(28, 28, 133), 0 0 0.2em rgb(28, 28, 133);
+}

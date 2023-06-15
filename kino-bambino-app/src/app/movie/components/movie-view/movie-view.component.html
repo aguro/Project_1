@@ -1,0 +1,19 @@
+<div class="movies-contaier">
+  <div class="movie-contaier" *ngFor="let movie of movies">
+    <a [routerLink]="['/movie-details', movie.id]">
+      <h4>{{movie.title}}</h4>
+    </a>
+    <p>Year: {{movie.year}}</p>
+    <p id="genre-list">Genres:
+      <span *ngFor="let genre of movie.genres; let lastGenre = last">{{genre}}<ng-container *ngIf="!lastGenre"> |
+        </ng-container></span>
+    </p>
+    <img class="movie-image" (error)="handleError($event)" src="{{movie.medium_cover_image}}" alt="Movie cover image">
+    <div class="read-more-container">
+      <a [routerLink]="['/movie-details', movie.id]">
+        <span>Read more</span>
+        <img src="../../../../assets/more.png" alt="Read more image" />
+      </a>
+    </div>
+  </div>
+</div>
