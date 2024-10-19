@@ -33,18 +33,6 @@ The project utilizes Angular, PostgreSQL and Express technologies, allowing user
 
 ## STARTING PROJECT
 
-### Development server Angular
-
-`cd kino-bambino-app/src/app`
-
-Run `npm  start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-### Development server Express
-
-`cd server`
-
-Run `npm  start` for a dev server. Navigate to `http://localhost:3000/api`. The application will automatically reload if you change any of the source files.
-
 ### DB PostgreSQL
 
 `cd server/database`
@@ -53,6 +41,18 @@ Run `npm  start` for a dev server. Navigate to `http://localhost:3000/api`. The 
 * Install PostgreSQL on your computer.
 * Create an empty database in PostgreSQL.
 * Run the schema.sql file to create the database schema in the new database.
+
+### Development server Express
+
+`cd server`
+
+Run `npm  start` for a dev server. Navigate to `http://localhost:3000/api`. The application will automatically reload if you change any of the source files.
+
+### Development server Angular
+
+`cd kino-bambino-app/src/app`
+
+Run `npm  start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## TESTING DATA
 **Users:**
